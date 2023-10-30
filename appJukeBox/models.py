@@ -13,7 +13,15 @@ class Banda(models.Model):
     estilos = models.ManyToManyField("Estilo", null=True)
     
     def __str__(self):
-        return self.nombre, self.pais.nombre, self.descripcion
+        return self.nombre, self.descripcion
+    
+    def add_estilo(self, estilo):
+        self.estilos.add(estilo) 
+        return "Estilo",estilo.nombre,"añadido"
+    
+    def set_pais(self, pais):
+        self.pais = pais
+        return "Pais",pais,"asignado"
 
 class Estilo(models.Model):
     nombre = models.CharField(max_length=50)
