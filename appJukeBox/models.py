@@ -12,4 +12,3 @@ class Banda(models.Model):
 class Estilo(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField()
-    bandas = models.ManyToManyField(Banda, null=True)
