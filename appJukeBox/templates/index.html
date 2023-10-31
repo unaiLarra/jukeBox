@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Listado de estilos</title>
-    </head>
-    <body>
-        <div id="content">
-	     <h1>jukeBox</h1>
-         <h2>Listado de estilos</h2>
-         {% if lista_estilos %}
+{% extends "base.html" %}
+
+{% block titulo %}Listado de estilos{% endblock %}
+
+{% block contenido %}
+    <h2>Listado de estilos</h2>
+    {% if lista_estilos %}
              <ul>
              {% for e in lista_estilos %}
                  <li>
@@ -18,7 +14,5 @@
              </ul>
          {% else %}
          <p>No hay estilos creados.</p>
-         {% endif %}
-        </div>
-    </body>
-</html>
+    {% endif %}
+{% endblock %}

@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <link rel="stylesheet" href="style.css">
-    <title>Detalles de la banda</title>
-</head>
+{% block titulo %}Detalles de la banda{% endblock %}
 
-<body>
-    <div id="content">
-        <h1>jukeBox</h1>
-        <h2>Datos de la banda</h2>
 
+{% block contenido %}
+    <h2>Datos de la banda</h2>
         {% if banda %}
             <ul>
                 <li>
@@ -37,8 +31,5 @@
             {% endif %}
         {% else %}
             <p>No existe esta banda.</p>
-        {% endif %}
-    </div>
-</body>
-
-</html>
+    {% endif %}
+{% endblock %}
