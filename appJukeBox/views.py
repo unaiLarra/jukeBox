@@ -31,7 +31,8 @@ def show_banda(request, banda_id):
 #devuelve los datos de un pais
 def show_pais(request, pais_id):
 	pais = get_object_or_404(Pais.objects.get(pk=pais_id))
-	context = {'pais': pais}
+	bandas = pais.banda_set.all()
+	context = {'pais': pais, 'bandas': bandas}
 	return render(request, 'pais.html', context)
 
 #devuelve las bandas de un pais

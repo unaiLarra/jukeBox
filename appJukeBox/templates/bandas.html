@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Bandas</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>jukeBox</h1>
+        <h2>Lista de bandas</h2>
+        {% if bandas %}
+            <ul>
+                {% for b in bandas %}
+                <li>
+                    <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay bandas creadas.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

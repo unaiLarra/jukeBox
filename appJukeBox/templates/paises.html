@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Paises</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>jukeBox</h1>
+        <h2>Lista de paises</h2>
+        {% if paises %}
+            <ul>
+                {% for p in paises %}
+                <li>
+                    <a href="/appJukeBox/paises/{{ p.id }}">{{ p.nombre}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay paises añadidos.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

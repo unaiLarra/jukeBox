@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Detalles de la banda</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>jukeBox</h1>
+        <h2>Datos de la banda</h2>
+
+        {% if banda %}
+            <ul>
+                <li>
+                    {{ banda.nombre}}
+                </li>
+                <li>
+                    <a href="/appJukeBox/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
+                </li>
+                <li>
+                    {{ banda.descripcion}}
+                </li>
+            </ul>
+            <h3>Lista de estilos</h3>
+            {% if estilos %}
+                <ol>
+                    {% for e in estilos %}
+                        <li>
+                            <a href="/appJukeBox/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% else %}
+                <p>No tiene estilos asociados.</p>
+            {% endif %}
+        {% else %}
+            <p>No existe esta banda.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
