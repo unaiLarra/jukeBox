@@ -10,7 +10,7 @@ def index_estilos(request):
 
 #devuelve los detalles de un estilo
 def show_estilo(request, estilo_id):
-	estilo = get_object_or_404(Estilo.objects.get(pk=estilo_id))
+	estilo = get_object_or_404(Estilo, pk=estilo_id)
 	bandas = estilo.banda_set.all()
 	context = {'bandas': bandas, 'estilo': estilo}
 	return render(request, "estilo.html", context)
@@ -23,14 +23,14 @@ def index_bandas(request):
 
 #devuelve los detalles de una banda
 def show_banda(request, banda_id):
-	banda = get_object_or_404(Banda.objects.get(pk=banda_id))
+	banda = get_object_or_404(Banda, pk=banda_id)
 	estilos = banda.estilos.all()
 	context = {'banda': banda, 'estilos': estilos}
 	return render(request, 'banda.html', context)
 
 #devuelve los datos de un pais
 def show_pais(request, pais_id):
-	pais = get_object_or_404(Pais.objects.get(pk=pais_id))
+	pais = get_object_or_404(Pais, pk=pais_id)
 	bandas = pais.banda_set.all()
 	context = {'pais': pais, 'bandas': bandas}
 	return render(request, 'pais.html', context)
