@@ -8,24 +8,27 @@
         {% if banda %}
             <ul>
                 <li>
+                    Nombre: 
                     {{ banda.nombre}}
                 </li>
                 <li>
+                    Pais de Origen: 
                     <a href="/appJukeBox/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
                 </li>
                 <li>
+                    Descripcion: 
                     {{ banda.descripcion}}
                 </li>
             </ul>
             <h3>Lista de estilos</h3>
             {% if estilos %}
-                <ol>
+                <ul>
                     {% for e in estilos %}
                         <li>
                             <a href="/appJukeBox/estilos/{{ e.id }}">{{ e.nombre}}</a>
                         </li>
                     {% endfor %}
-                </ol>
+                </ul>
             {% else %}
                 <p>No tiene estilos asociados.</p>
             {% endif %}
