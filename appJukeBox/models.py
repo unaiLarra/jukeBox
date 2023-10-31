@@ -3,9 +3,12 @@ from django.db import models
 class Pais(models.Model):
     nombre = models.CharField(max_length=50)
 
+
+    # Define lo que se muestra en http://127.0.0.1:8000/admin
     def __str__(self):
         return self.nombre
-    
+
+    # Solo utiles para trabajar en shell(es preferible hacer cambios desde la pagina http://127.0.0.1:8000/admin)
     def set_nombre(self,nombre):
         self.nombre = nombre
         return "Nombre",nombre,"asignado" 
@@ -16,9 +19,12 @@ class Banda(models.Model):
     descripcion = models.TextField()
     estilos = models.ManyToManyField("Estilo", null=True)
     
+
+    # Define lo que se muestra en http://127.0.0.1:8000/admin
     def __str__(self):
         return self.nombre
     
+    # Solo utiles para trabajar en shell(es preferible hacer cambios desde la pagina http://127.0.0.1:8000/admin)
     def set_nombre(self,nombre):
         self.nombre = nombre
         return "Nombre",nombre,"asignado" 
@@ -39,9 +45,12 @@ class Estilo(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField()
 
+
+    # Define lo que se muestra en http://127.0.0.1:8000/admin
     def __str__(self):
         return self.nombre
     
+    # Solo utiles para trabajar en shell(es preferible hacer cambios desde la pagina http://127.0.0.1:8000/admin)
     def set_nombre(self, nombre):
         self.nombre = nombre
         return "Nombre",nombre,"asignado"
