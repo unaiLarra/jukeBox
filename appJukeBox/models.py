@@ -17,7 +17,7 @@ class Banda(models.Model):
     estilos = models.ManyToManyField("Estilo", null=True)
     
     def __str__(self):
-        return self.nombre, self.descripcion
+        return self.nombre
     
     def set_nombre(self,nombre):
         self.nombre = nombre
@@ -40,7 +40,7 @@ class Estilo(models.Model):
     descripcion = models.TextField()
 
     def __str__(self):
-        return self.nombre, self.descripcion
+        return self.nombre
     
     def set_nombre(self, nombre):
         self.nombre = nombre
