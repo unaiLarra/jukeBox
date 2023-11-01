@@ -5,10 +5,23 @@ body {
     border: 0px;
 }
 
+header {
+    margin: 0px;
+    border: 0px;
+    background-image: url("../images/_MG_1187.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: brown;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: 5em;
+    letter-spacing: -0.1em;
+    color: white;
     text-align: center;
 }
 

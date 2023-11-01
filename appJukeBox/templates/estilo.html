@@ -3,32 +3,31 @@
 {% block titulo %}Detalle del estilo{% endblock %}
 
 {% block contenido %}
-    <section>
-        <h2>Datos del estilo</h2>
-        {% if estilo %}
-                <ul>
-                    <li>
-                        {{ estilo.nombre}}
-                    </li>
-                    <li>
-                        {{ estilo.descripcion}}
-                    </li>
-                    <li>
-                        {% if bandas %}
-                            <ul>
-                            {% for b in bandas %}
-                                <li>
-                                    <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        {% else %}
-                            No hay bandas dentro de este estilo
-                        {% endif %}
-                    </li>
-                </ul>
+    <h2>Datos del estilo</h2>
+    {% if estilo %}
+            <ul>
+                <li>
+                    <b>Nombre:</b> 
+                    {{estilo.nombre}}
+                </li>
+                <li>
+                    <b>Descripción:</b>
+                    {{ estilo.descripcion}}
+                </li>
+            </ul>
+            <h3>Lista de bandas</h3>
+            {% if bandas %}
+            <ul>
+                {% for b in bandas %}
+                <li>
+                    <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                </li>
+                {% endfor %}
+            </ul>
             {% else %}
-                <p>No existe este estilo.</p>
-        {% endif %}
-    </section>
+                No hay bandas dentro de este estilo
+            {% endif %}
+    {% else %}
+        <p>No existe este estilo.</p>
+    {% endif %}
 {% endblock %}

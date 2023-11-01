@@ -8,15 +8,15 @@
         {% if banda %}
             <ul>
                 <li>
-                    Nombre: 
+                    <b>Nombre:</b> 
                     {{ banda.nombre}}
                 </li>
                 <li>
-                    Pais de Origen: 
+                    <b>Pais de Origen:</b>
                     <a href="/appJukeBox/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
                 </li>
                 <li>
-                    Descripcion: 
+                    <b>Descripcion:</b>
                     {{ banda.descripcion}}
                 </li>
             </ul>

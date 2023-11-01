@@ -5,17 +5,21 @@
 {% block contenido %}
     <h2>Datos del pais</h2>
     {% if pais %}
-            <h3>{{ pais.nombre}}</h3>
+            <ul>
+                <li>
+                    <b>Nombre:</b> {{ pais.nombre}}
+                </li>
+            </ul>
             <h3>Lista de bandas</h3>
             
             {% if bandas %}
-            <ol>
+            <ul>
                 {% for b in bandas %}
                     <li>
                         <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
                     </li>
                 {% endfor %}
-            </ol>
+            </ul>
             {% else %}
                 <p>No tiene bandas asociadas.</p>
             {% endif %}
