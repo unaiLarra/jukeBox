@@ -8,6 +8,7 @@ body {
 header {
     margin: 0px;
     border: 0px;
+    background-color: brown;
     background-image: url("../images/img.jpg");
     background-size: cover;
     background-position: center;
