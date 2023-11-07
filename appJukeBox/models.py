@@ -36,6 +36,7 @@ class Banda(models.Model):
     pais = models.ForeignKey(Pais, on_delete=models.SET_NULL, null=True)
     descripcion = models.TextField()
     estilos = models.ManyToManyField(Estilo)
+    estilo_principal = models.ForeignKey(Estilo, on_delete=models.SET_NULL, null=False)
     
 
     # Define lo que se muestra en http://127.0.0.1:8000/admin
@@ -58,3 +59,7 @@ class Banda(models.Model):
     def set_pais(self, pais):
         self.pais = pais
         return "Pais",pais,"asignado"
+
+    def set_estiloprincipal(self, estilo_principal):
+        self.estilo_principal = estilo_principal    
+        return "Estilo principañ", estilo_principal, "asignado"

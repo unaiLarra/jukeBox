@@ -5,6 +5,7 @@ from .models import Pais, Banda, Estilo
 #devuelve el listado de paises
 def index_estilos(request):
 	estilos = get_list_or_404(Estilo.objects.order_by('nombre'))
+	listabandas = Banda.objects.raw('SELECT * FROM( SELECT * FROM appJukeBox_Estilo ORDER BY ) GROUP BY estilo_nombre ')
 	context = {'lista_estilos': estilos}
 	return render(request, 'index.html', context)
 
