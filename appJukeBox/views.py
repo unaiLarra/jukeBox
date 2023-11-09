@@ -3,10 +3,9 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from .models import Pais, Banda, Estilo
 
 #devuelve el listado de paises
-def index_estilos(request):
-	estilos = get_list_or_404(Estilo.objects.order_by('nombre'))
-	listabandas = Banda.objects.raw('SELECT * FROM( SELECT * FROM appJukeBox_Estilo ORDER BY ) GROUP BY estilo_nombre ')
-	context = {'lista_estilos': estilos}
+def index_pais_banda(request):
+	listabandas = Banda.objects.raw('SELECT * FROM( SELECT * FROM appJukeBox_Banda ORDER BY nombre DESC) GROUP BY pais_id')
+	context = {'lista_banda': listabandas}
 	return render(request, 'index.html', context)
 
 #devuelve los detalles de un estilo
@@ -36,8 +35,14 @@ def show_pais(request, pais_id):
 	context = {'pais': pais, 'bandas': bandas}
 	return render(request, 'pais.html', context)
 
-#devuelve las bandas de un pais
+#devuelve la lista de paises
 def index_paises(request):
 	paises = get_list_or_404(Pais.objects.order_by('nombre'))
 	context = {'paises': paises}
 	return render(request, 'paises.html', context)
+
+#devuelve las bandas de un pais
+def index_estilos(request):
+	estilos = get_list_or_404(Estilo.objects.order_by('nombre'))
+	context = {'estilos': estilos}
+	return render(request, 'estilos.html', context)

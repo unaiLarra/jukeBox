@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block titulo %}Paises{% endblock %}
+
+{% block contenido %}
+    <h2>Lista de paises</h2>
+    {% if estilos %}
+            <ul>
+                {% for e in estilos %}
+                <li>
+                    <a href="/appJukeBox/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay paises añadidos.</p>
+    {% endif %}
+{% endblock %}

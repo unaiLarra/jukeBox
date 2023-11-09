@@ -3,15 +3,17 @@
 {% block titulo %}Listado de estilos{% endblock %}
 
 {% block contenido %}
-    <h2>Lista de estilos</h2>
-    {% if lista_estilos %}
-             <ul>
-             {% for e in lista_estilos %}
-                 <li>
-                     <a href="/appJukeBox/estilos/{{ e.id }}">{{ e.nombre}}</a>
-                 </li>
+    {% if lista_banda %}
+             {% for b in lista_banda %}
+                <h2>
+                    <a href="/appJukeBox/paises/{{ b.pais.id }}">{{ b.pais }}</a>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                    </li>
+                </ul>
              {% endfor %}
-             </ul>
          {% else %}
          <p>No hay estilos creados.</p>
     {% endif %}
