@@ -5,6 +5,8 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
         <title>{% block titulo %}JukeBox{% endblock %}</title>
+        {% block javascript %}
+        {% endblock %}
     </head>
     <body>
         <div id="content">
