@@ -14,11 +14,11 @@
     {% if lista_banda %}
              {% for b in lista_banda %}
                 <h2>
-                    <a href="/appJukeBox/paises/{{ b.pais.id }}">{{ b.pais }}</a>
+                    <a href="/paises/{{ b.pais.id }}">{{ b.pais }}</a>
                 </h2>
                 <ul>
                     <li>
-                        <a href="/appJukeBox/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                        <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
                     </li>
                 </ul>
              {% endfor %}

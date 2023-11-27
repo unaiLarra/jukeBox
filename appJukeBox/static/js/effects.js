@@ -1,11 +1,14 @@
 $(document).ready(function() {
 
-  $("div.posts > h1.content-subhead").click(function () {
-    $("div.post-description").slideUp();
+  var is_up = false;
+  $("div.contenido > h2.listado").dbclick(function () {
+    if (is_up == false) {
+      is_up = true;
+      $("div.bandas").slideUp();
+    } else {
+      is_up = false;
+      $("div.bandas").slideDown();
+    }
   });
 
-  $("div.posts > h1.content-subhead").dblclick(function () {
-    $("div.post-description").slideDown();
-  });
-  
  });

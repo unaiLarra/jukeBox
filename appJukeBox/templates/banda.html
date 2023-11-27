@@ -13,7 +13,7 @@
                 </li>
                 <li>
                     <b>Pais de Origen:</b>
-                    <a href="/appJukeBox/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
+                    <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
                 </li>
                 <li>
                     <b>Descripcion:</b>
@@ -25,7 +25,7 @@
                 <ul>
                     {% for e in estilos %}
                         <li>
-                            <a href="/appJukeBox/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                            <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
                         </li>
                     {% endfor %}
                 </ul>
