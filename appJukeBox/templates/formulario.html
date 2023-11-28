@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}Detalles de la banda{% endblock %}
+
+{% block contenido %}
+    <h2>Añade una banda</h2>
+    {% if submitted %}
+        ¡Tu banda se ha añadido con éxito!
+    {% else %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form }}
+
+            <input type="submit" value="Submit">
+
+        </form>
+    {% endif %}
+   
+
+{% endblock %}

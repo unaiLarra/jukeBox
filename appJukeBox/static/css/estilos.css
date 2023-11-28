@@ -94,3 +94,7 @@ a:hover {
 .card h2 {
     padding-left: 15px;
 }
+
+form *{
+    display: block;
+}

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, get_list_or_404
+from django.http import HttpResponseRedirect
 from .models import Pais, Banda, Estilo
+from .forms import BandaForm
 
 #devuelve el listado de paises
 def index_pais_banda(request):
@@ -46,3 +48,17 @@ def index_estilos(request):
 	estilos = get_list_or_404(Estilo.objects.order_by('nombre'))
 	context = {'estilos': estilos}
 	return render(request, 'estilos.html', context)
+
+def upload_banda(request):
+	submitted = False
+	if request.method == "POST":
+		form = BandaForm(request.POST)
+		if form.is_valid():
+			form.save
+			return HttpResponseRedirect("formulario?submitted=True")
+	else:
+		if "submitted" in request.GET:
+			submitted = True
+
+	context = {'form': BandaForm(), 'submitted':submitted}
+	return render(request, 'formulario.html', context)
