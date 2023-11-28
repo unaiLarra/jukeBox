@@ -12,21 +12,26 @@
 
 {% block contenido %}
     
-    <h2 class="listado">Listado de paises</h2>
-
+    <div>
+        <h2 class="listado">Listado de paises</h2>
+    </div>
+    
     <section class="container">
         {% if lista_banda %}
         {% for b in lista_banda %}
             <div class="card">
                 <div class="card-image"></div>
-                <h2>
-                    <a href="/paises/{{ b.pais.id }}">{{ b.pais }}</a>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
-                    </li>
-                </ul>
+                <div class="card-content">
+                    <h2>
+                        <a href="/paises/{{ b.pais.id }}">{{ b.pais }}</a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         {% endfor %}
         {% else %}

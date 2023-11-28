@@ -66,6 +66,7 @@ a:hover {
     margin: 0px;
     box-sizing: border-box;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -73,6 +74,7 @@ a:hover {
     width: 210px;
     height: 250px;
     border-radius: 8px;
+    margin-top: 10px;
 }
 
 .card-image {
