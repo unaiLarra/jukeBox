@@ -11,8 +11,14 @@
 {% endblock %}
 
 {% block contenido %}
-    {% if lista_banda %}
-             {% for b in lista_banda %}
+    
+    <h2 class="listado">Listado de paises</h2>
+
+    <section class="container">
+        {% if lista_banda %}
+        {% for b in lista_banda %}
+            <div class="card">
+                <div class="card-image"></div>
                 <h2>
                     <a href="/paises/{{ b.pais.id }}">{{ b.pais }}</a>
                 </h2>
@@ -21,8 +27,12 @@
                         <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
                     </li>
                 </ul>
-             {% endfor %}
-         {% else %}
-         <p>No hay estilos creados.</p>
-    {% endif %}
+            </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay estilos creados.</p>
+        {% endif %}
+    </section>
+
+
 {% endblock %}
