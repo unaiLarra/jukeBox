@@ -35,7 +35,8 @@ class Banda(models.Model):
     nombre = models.CharField(max_length=100)
     pais = models.ForeignKey(Pais, on_delete=models.SET_NULL, null=True)
     descripcion = models.TextField()
-    estilos = models.ManyToManyField(Estilo)    
+    estilos = models.ManyToManyField(Estilo)  
+    imagen = models.ImageField(null=True, blank=True ,upload_to="images/")  
 
     # Define lo que se muestra en http://127.0.0.1:8000/admin
     def __str__(self):
