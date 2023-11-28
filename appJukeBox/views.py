@@ -52,13 +52,19 @@ def index_estilos(request):
 def upload_banda(request):
 	submitted = False
 	if request.method == "POST":
-		form = BandaForm(request.POST)
+		form = BandaForm(request.POST, request.FILES)
 		if form.is_valid():
 			form.save
 			return HttpResponseRedirect("formulario?submitted=True")
+		else:
+			form = BandaForm()
+			context = {'form': form, 'submitted':submitted}
+			return render(request, 'formulario.html', context)
+	
 	else:
+		form = BandaForm()
 		if "submitted" in request.GET:
 			submitted = True
 
-	context = {'form': BandaForm(), 'submitted':submitted}
+	context = {'form': form, 'submitted':submitted}
 	return render(request, 'formulario.html', context)
