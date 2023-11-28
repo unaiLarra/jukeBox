@@ -20,7 +20,11 @@
         {% if lista_banda %}
         {% for b in lista_banda %}
             <div class="card">
-                <div class="card-image"></div>
+                <div class="card-image">
+                    {% if b.imagen %}
+                    <img src="{{b.imagen.url}}" alt="sin imagen">
+                    {% endif %}
+                </div>
                 <div class="card-content">
                     <h2>
                         <a href="/paises/{{ b.pais.id }}">{{ b.pais }}</a>
