@@ -162,4 +162,10 @@ option {
     padding-bottom: 10px;
 }
 
+.submit-form:hover {
+    background-color: rgb(122, 85, 155);
+    border: 2px solid rgb(122, 85, 155);
+
+}
+
 
