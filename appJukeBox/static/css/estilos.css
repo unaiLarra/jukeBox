@@ -61,28 +61,26 @@ a:hover {
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
     background-color: rgb(207, 159, 228);
-    width: 210px;
-    height: 250px;
+    min-height: 250px;
     border-radius: 8px;
-    margin-top: 10px;
 }
 
 .card-image {
     background-color: rgb(122, 85, 155);
-    height: 120px;
-    margin-bottom: 15px;
+    height: 150px;
     border-radius: 8px 8px 0 0;
     overflow: hidden;
+    display: block;
 }
 
 .card-image img{
@@ -93,6 +91,12 @@ a:hover {
 
 .card h2 {
     padding-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.card ul {
+    margin-top: 8px;
 }
 
 form *{
