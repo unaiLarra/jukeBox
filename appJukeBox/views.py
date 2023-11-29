@@ -54,12 +54,9 @@ def upload_banda(request):
 	if request.method == "POST":
 		form = BandaForm(request.POST, request.FILES)
 		if form.is_valid():
-			form.save
+			form.save()
+			print("Should be saved!")
 			return HttpResponseRedirect("formulario?submitted=True")
-		else:
-			form = BandaForm()
-			context = {'form': form, 'submitted':submitted}
-			return render(request, 'formulario.html', context)
 	
 	else:
 		form = BandaForm()

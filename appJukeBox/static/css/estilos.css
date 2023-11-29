@@ -98,3 +98,7 @@ a:hover {
 form *{
     display: block;
 }
+
+form label{
+    display: inline-block;
+}
