@@ -10,14 +10,40 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            {{ form.nombre }}
-            {{ form.pais }}
-            {{ form.descripcion }}
-            {{ form.estilo }}
-            {{ form.imagen }}
+            <section class="form-container">
+                <div class="card">
+                    <div class="form-card-content">
+                        <label> Nombre <br>{{ form.nombre }}</label><br>
+                    </div>
+                </div>
             
-            <input type="submit" value="Submit">
+                <div class="card">
+                    <div class="form-card-content">
+                        <label> Pais <br>{{ form.pais }}</label><br>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="form-card-content">
+                        <label> Descripcion <br> {{ form.descripcion }}</label><br>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="form-card-content">
+                        <label> Estilos <br> {{ form.estilos }}</label><br>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="form-card-content">
+                        <label> Imagen <br> {{ form.imagen }}</label><br>
+                    </div>                   
+                </div>
+            </section>
+
+            <div class="button">
+                <input type="submit" value="Submit" class="submit-form">
+            </div>
         </form>
     {% endif %}
    
