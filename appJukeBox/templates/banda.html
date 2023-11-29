@@ -6,33 +6,41 @@
 {% block contenido %}
     <h2>Datos de la banda</h2>
         {% if banda %}
-            <ul>
-                <li>
-                    <b>Nombre:</b> 
-                    {{ banda.nombre}}
-                </li>
-                <li>
-                    <b>Pais de Origen:</b>
-                    <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
-                </li>
-                <li>
-                    <b>Descripcion:</b>
-                    {{ banda.descripcion}}
-                </li>
-            </ul>
-            <h3>Lista de estilos</h3>
-            {% if estilos %}
+            <section class="detail">
                 <ul>
-                    {% for e in estilos %}
-                        <li>
-                            <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
-                        </li>
-                    {% endfor %}
+                    <li>
+                        <b>Nombre:</b> 
+                        {{ banda.nombre}}
+                    </li>
+                    <li>
+                        <b>Pais de Origen:</b>
+                        <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
+                    </li>
+                    <li>
+                        <b>Descripcion:</b>
+                        {{ banda.descripcion}}
+                    </li>
                 </ul>
-            {% else %}
-                <p>No tiene estilos asociados.</p>
-            {% endif %}
+            </section>
+
+            <h2>Lista de estilos</h2>
+
+            <section class="container">
+                {% if estilos %}
+                    {% for e in estilos %}
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>
+                                <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                            </h2>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No hay paises añadidos.</p>
+                {% endif %}
+            </section>
         {% else %}
             <p>No existe esta banda.</p>
-    {% endif %}
+        {% endif %}
 {% endblock %}

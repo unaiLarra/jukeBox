@@ -4,15 +4,21 @@
 
 {% block contenido %}
     <h2>Lista de paises</h2>
-    {% if estilos %}
-            <ul>
-                {% for e in estilos %}
-                <li>
-                    <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
-                </li>
-                {% endfor %}
-            </ul>
+
+    <section class="container">
+        {% if estilos %}
+            {% for e in estilos %}
+            <div class="card">
+                <div class="card-content">
+                    <h2>
+                        <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                    </h2>
+                </div>
+            </div>
+            {% endfor %}
         {% else %}
             <p>No hay paises añadidos.</p>
-    {% endif %}
+        {% endif %}
+    </section>
+ 
 {% endblock %}
