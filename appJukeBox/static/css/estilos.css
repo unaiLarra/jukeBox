@@ -28,7 +28,8 @@ h1 {
     text-align: center;
 }
 
-section {
+#dinamico {
+    margin-bottom: 100px;
     padding-top: 20px;
     padding-left: 17%;
     padding-right: 17%;
@@ -83,7 +84,7 @@ a:hover {
 
 .card {
     background-color: rgb(207, 159, 228);
-    min-height: 100px;
+    min-height: 70px;
     border-radius: 8px;
 }
 
@@ -93,6 +94,10 @@ a:hover {
     border-radius: 8px 8px 0 0;
     overflow: hidden;
     display: block;
+}
+
+.card-content {
+    margin-bottom: 15px;
 }
 
 .card-image img{
@@ -109,6 +114,7 @@ a:hover {
 
 .card ul {
     margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 form *{

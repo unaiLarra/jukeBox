@@ -4,15 +4,26 @@
 
 {% block contenido %}
     <h2>Lista de bandas</h2>
-    {% if bandas %}
-            <ul>
-                {% for b in bandas %}
-                <li>
-                    <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
-                </li>
-                {% endfor %}
-            </ul>
+
+    <section class="container">
+        {% if bandas %}
+            {% for b in bandas %}
+            <div class="card">
+                <div class="card-image">
+                    {% if b.imagen %}
+                    <img src="{{b.imagen.url}}" alt="sin imagen">
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                    </h2>
+                </div>
+            </div>
+            {% endfor %}
         {% else %}
             <p>No hay bandas creadas.</p>
-    {% endif %}
+        {% endif %}
+    </section>
+ 
 {% endblock %}
