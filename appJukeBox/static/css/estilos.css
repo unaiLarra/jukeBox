@@ -120,11 +120,3 @@ a:hover {
     margin-top: 8px;
     margin-bottom: 0px;
 }
-
-form *{
-    display: block;
-}
-
-form label{
-    display: inline-block;
-}

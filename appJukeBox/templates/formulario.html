@@ -10,8 +10,12 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            {{ form }}
-
+            {{ form.nombre }}
+            {{ form.pais }}
+            {{ form.descripcion }}
+            {{ form.estilo }}
+            {{ form.imagen }}
+            
             <input type="submit" value="Submit">
 
         </form>
