@@ -8,10 +8,10 @@
     <section class="container">
         {% if estilos %}
             {% for e in estilos %}
-            <div class="card">
+            <div class="card" onclick="redirect('/estilos/{{ e.id }}')">
                 <div class="card-content">
                     <h2>
-                        <a href="/estilos/{{ e.id }}">{{ e.nombre}}</a>
+                        {{ e.nombre}}
                     </h2>
                 </div>
             </div>

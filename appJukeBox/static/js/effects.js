@@ -5,3 +5,7 @@ $(document).ready(function() {
   });
 
  });
+
+function redirect(link) {
+  window.location = link; 
+}
