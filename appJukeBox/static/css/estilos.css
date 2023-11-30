@@ -170,7 +170,15 @@ label *{
     border-radius: 5px;
     background-color: var(--color-acento-claro1);
     border: 2px solid var(--color-bordes1);
+
+    transition: all 0.3s;
 }
+
+.card:hover > .form-card-content label *{
+    background-color: var(--color-acento-transicion1);
+    
+}
+
 
 option {
     margin-top: 0px;
@@ -183,6 +191,7 @@ option {
 }
 
 .submit-form {
+    font-size: 1em;
     border-radius: 5px;
     background-color: var(--color-acento-claro1);
     border: 2px solid var(--color-acento-claro1);
@@ -190,11 +199,13 @@ option {
     padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    transition: all 0.3s;
 }
 
 .submit-form:hover {
-    background-color: var(--color-bordes1);
-    border: 2px solid var(--color-bordes1);
+    background-color: var(--color-acento-transicion1);
+    border: 2px solid var(--color-acento-transicion1);
 
 }
 
