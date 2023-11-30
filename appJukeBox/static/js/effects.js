@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $("#titulo").dbclick(function () {
+  $(".listado").dbclick(function () {
       $("div.card-content").slideUp();
   });
 
