@@ -1,3 +1,5 @@
+/* Paletas de colores */
+
 :root {
     --color-primario: rgb(248, 196, 245);
     --color-acento-oscuro: rgb(48, 35, 58);
@@ -39,6 +41,8 @@
     color: var(--color-seleccion-texto);
     background: var(--color-seleccion-fondo);
 }
+
+/* Ajustes generales */
 
 body {
     font-family: system-ui;
@@ -114,15 +118,30 @@ a:hover {
 /* Detalles de modelos */
 
 .detail {
-    margin-bottom: 50px;
+    margin-bottom: 19.92px;
 }
 
 .detail .card {
-    padding-top: 6px;
     padding-bottom: 15px;
 }
 
-/* Grid de 'cartas' */
+.detail .card:hover {
+    background-color: var(--color-acento-claro);
+}
+
+.detail .card ul {
+    padding-top: 5px;
+}
+
+.detail .card .card-image {
+    height: 300px;
+}
+
+.detail .card:hover > .card-image img{
+    scale: 1;
+}
+
+/* Grids y 'cartas' */
 
 .container {
     display: grid;

@@ -8,6 +8,11 @@
         {% if banda %}
             <section class="detail">
                 <div class="card">
+                    <div class="card-image">
+                        {% if banda.imagen %}
+                        <img src="{{banda.imagen.url}}" alt="sin imagen">
+                        {% endif %}
+                    </div>
                     <ul>
                         <li>
                             <b>Nombre:</b> 
