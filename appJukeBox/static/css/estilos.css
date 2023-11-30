@@ -1,6 +1,8 @@
 /* Paletas de colores */
 
 :root {
+    --transition-time: 0.5s;
+
     --color-primario: rgb(248, 196, 245);
     --color-acento-oscuro: rgb(48, 35, 58);
     --color-acento-claro: rgb(207, 159, 228);
@@ -8,7 +10,7 @@
     --color-acento-transicion: rgb(201, 137, 228);
 
     --color-seleccion-texto: rgb(255, 238, 254);
-    --color-seleccion-fondo: rgb(255, 98, 245);
+    --color-seleccion-fondo: rgb(233, 92, 223);
 
     /* High contrast */
 
@@ -106,7 +108,7 @@ nav a {
 
 a {
     color: var(--color-acento-oscuro);
-    transition: all 0.3s;
+    transition: all var(--transition-time);
 
 }
 
@@ -156,7 +158,7 @@ a:hover {
     background-color: var(--color-acento-claro);
     border-radius: 8px;
 
-    transition: all 0.3s;
+    transition: all var(--transition-time);
 }
 
 .card-image {
@@ -168,7 +170,7 @@ a:hover {
 }
 
 .card-image img {
-    transition: all 0.3s;
+    transition: all var(--transition-time);
 }
 
 .card:hover {
@@ -224,7 +226,7 @@ label *{
     background-color: var(--color-acento-claro);
     border: 2px solid var(--color-bordes);
 
-    transition: all 0.3s;
+    transition: all var(--transition-time);
 }
 
 .card:hover > .form-card-content label *{
@@ -252,7 +254,7 @@ option {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    transition: all 0.3s;
+    transition: all var(--transition-time);
 }
 
 .submit-form:hover {
