@@ -1,16 +1,23 @@
+:root {
+    --color-primario1: rgb(248, 196, 245);
+    --color-acento-oscuro1: rgb(48, 35, 58);
+    --color-acento-claro1: rgb(207, 159, 228);
+    --color-bordes1: rgb(122, 85, 155);
+}
+
 body {
     font-family: system-ui;
     padding: 0px;
     margin: 0px;
     border: 0px;
-    background-color: rgb(248, 196, 245);
+    background-color: var(--color-primario1);
     color: rgb(48, 35, 58);
 }
 
 header {
     margin: 0px;
     border: 0px;
-    background-color: rgb(36, 33, 31);
+    background-color: var(--color-acento-oscuro1);
     background-image: url("../images/img.jpg");
     background-size: cover;
     background-position: center;
@@ -24,7 +31,7 @@ h1 {
     padding: 0px;
     font-size: 5em;
     letter-spacing: -0.1em;
-    color: rgb(248, 196, 245);
+    color: var(--color-primario1);
     text-align: center;
 }
 
@@ -34,6 +41,8 @@ h1 {
     padding-left: 17%;
     padding-right: 17%;
 }
+
+/* Navegacion */
 
 nav {
     text-align: right;
@@ -46,7 +55,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    background-color: rgb(207, 159, 228);
+    background-color: var(--color-acento-claro1);
 }
 
 nav a {
@@ -60,18 +69,15 @@ nav a:hover {
 }
 
 a {
-    color: rgb(48, 35, 58);
+    color: var(--color-acento-oscuro1);
 }
 
 a:hover {
-    background: rgb(48, 35, 58);
-    color: rgb(248, 196, 245);
+    background: var(--color-acento-oscuro1);
+    color: var(--color-primario1);
 }
 
-a:hover {
-    background: rgb(48, 35, 58);
-    color: rgb(248, 196, 245);
-}
+/* Detalles de modelos */
 
 .detail {
     margin-bottom: 50px;
@@ -91,13 +97,15 @@ a:hover {
     justify-content: center;
 }
 
+/* Grid de 'cartas' */
+
 .card {
-    background-color: rgb(207, 159, 228);
+    background-color: var(--color-acento-claro1);
     border-radius: 8px;
 }
 
 .card-image {
-    background-color: rgb(122, 85, 155);
+    background-color: var(--color-acento-oscuro1);
     height: 150px;
     border-radius: 8px 8px 0 0;
     overflow: hidden;
@@ -125,6 +133,8 @@ a:hover {
     margin-bottom: 0px;
 }
 
+/* Formulario */
+
 .form-container {
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(70px, 1fr));
@@ -143,8 +153,8 @@ label *{
     margin-top: 6px;
     width: 98.5%;
     border-radius: 5px;
-    background-color: rgb(207, 159, 228);
-    border: 2px solid rgb(122, 85, 155);
+    background-color: var(--color-acento-claro1);
+    border: 2px solid var(--color-bordes1);
 }
 
 option {
@@ -159,8 +169,8 @@ option {
 
 .submit-form {
     border-radius: 5px;
-    background-color: rgb(207, 159, 228);
-    border: 2px solid rgb(207, 159, 228);
+    background-color: var(--color-acento-claro1);
+    border: 2px solid var(--color-acento-claro1);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
@@ -168,8 +178,8 @@ option {
 }
 
 .submit-form:hover {
-    background-color: rgb(122, 85, 155);
-    border: 2px solid rgb(122, 85, 155);
+    background-color: var(--color-bordes1);
+    border: 2px solid var(--color-bordes1);
 
 }
 
