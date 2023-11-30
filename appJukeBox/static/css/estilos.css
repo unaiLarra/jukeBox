@@ -176,7 +176,6 @@ label *{
 
 .card:hover > .form-card-content label *{
     background-color: var(--color-acento-transicion1);
-    
 }
 
 
@@ -207,6 +206,12 @@ option {
     background-color: var(--color-acento-transicion1);
     border: 2px solid var(--color-acento-transicion1);
 
+}
+
+.form-submitted .card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 

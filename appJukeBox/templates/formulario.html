@@ -5,7 +5,11 @@
 {% block contenido %}
     <h2>Añade una banda</h2>
     {% if submitted %}
-        ¡Tu banda se ha añadido con éxito!
+        <section class="form-submitted">
+            <div class="card">
+                <p>¡Tu banda se ha añadido con éxito!</p>
+            </div>
+        </section>
     {% else %}
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
