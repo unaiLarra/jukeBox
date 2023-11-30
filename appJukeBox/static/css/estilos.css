@@ -37,7 +37,7 @@ h1 {
 
 nav {
     text-align: right;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-top: 10px;
     margin-left: 17%;
     margin-right: 17%;
@@ -75,6 +75,11 @@ a:hover {
 
 .detail {
     margin-bottom: 50px;
+}
+
+.detail .card {
+    padding-top: 6px;
+    padding-bottom: 15px;
 }
 
 .container {

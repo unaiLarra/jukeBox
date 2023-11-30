@@ -6,16 +6,18 @@
     <h2>Datos del estilo</h2>
     {% if estilo %}
             <section class="detail">
-                <ul>
-                <li>
-                    <b>Nombre:</b> 
-                    {{estilo.nombre}}
-                </li>
-                <li>
-                    <b>Descripción:</b>
-                    {{ estilo.descripcion}}
-                </li>
-                </ul>
+                <div class="card">
+                    <ul>
+                        <li>
+                            <b>Nombre:</b> 
+                            {{estilo.nombre}}
+                        </li>
+                        <li>
+                            <b>Descripción:</b>
+                            {{ estilo.descripcion}}
+                        </li>
+                    </ul>
+                </div>
             </section>
             
             <h2>Lista de bandas</h2>

@@ -7,20 +7,22 @@
     <h2>Datos de la banda</h2>
         {% if banda %}
             <section class="detail">
-                <ul>
-                    <li>
-                        <b>Nombre:</b> 
-                        {{ banda.nombre}}
-                    </li>
-                    <li>
-                        <b>Pais de Origen:</b>
-                        <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
-                    </li>
-                    <li>
-                        <b>Descripcion:</b>
-                        {{ banda.descripcion}}
-                    </li>
-                </ul>
+                <div class="card">
+                    <ul>
+                        <li>
+                            <b>Nombre:</b> 
+                            {{ banda.nombre}}
+                        </li>
+                        <li>
+                            <b>Pais de Origen:</b>
+                            <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
+                        </li>
+                        <li>
+                            <b>Descripcion:</b>
+                            {{ banda.descripcion}}
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <h2>Lista de estilos</h2>
