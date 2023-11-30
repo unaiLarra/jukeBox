@@ -3,6 +3,7 @@
     --color-acento-oscuro1: rgb(48, 35, 58);
     --color-acento-claro1: rgb(207, 159, 228);
     --color-bordes1: rgb(122, 85, 155);
+    --color-acento-transicion1: rgb(201, 137, 228);
 }
 
 body {
@@ -62,18 +63,17 @@ nav a {
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-nav a:hover {
     border-radius: 8px;
 }
 
 a {
     color: var(--color-acento-oscuro1);
+    transition: all 0.3s;
+
 }
 
 a:hover {
-    background: var(--color-acento-oscuro1);
+    background-color: var(--color-acento-oscuro1);
     color: var(--color-primario1);
 }
 
@@ -102,6 +102,8 @@ a:hover {
 .card {
     background-color: var(--color-acento-claro1);
     border-radius: 8px;
+
+    transition: all 0.3s;
 }
 
 .card-image {
@@ -110,6 +112,19 @@ a:hover {
     border-radius: 8px 8px 0 0;
     overflow: hidden;
     display: block;
+}
+
+.card-image img {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    background-color: var(--color-acento-transicion1);
+
+}
+
+.card:hover > .card-image img{
+    scale: 1.08;
 }
 
 .card-content {
