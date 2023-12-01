@@ -76,8 +76,8 @@ header {
     background-image: url("../images/img.jpg");
     background-size: cover;
     background-position: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 65px;
+    padding-bottom: 65px;
 }
 
 h1 {
@@ -199,7 +199,7 @@ a:hover {
 }
 
 .detail .card .card-image {
-    height: 300px;
+    height: 370px;
 }
 
 .detail .card:hover > .card-image img{
@@ -222,9 +222,6 @@ a:hover {
     border-radius: 8px;
 
     transition: all var(--transition-time);
-
-    animation: slideFromBottom var(--animation-time);
-
 }
 
 .card-image {
