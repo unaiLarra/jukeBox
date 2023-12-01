@@ -130,27 +130,50 @@ a:hover {
     color: var(--color-primario);
 }
 
-.dropdown:hover {
+/* Menu dropdown */
+
+.dropdown > a {
     border-radius: 8px 8px 0 0;
-    background-color: var(--color-acento-transicion);
 }
 
-.dropdown:hover .content {
-    display: block;
+.dropdown:hover {
+    background-color: var(--color-acento-oscuro);
+    border-radius: 8px 8px 0 0;
 }
 
-.dropdown a {
+.dropdown:hover > a {
+    color: var(--color-primario);
+}
+
+.dropdown .content a {
     display: block;
+    background-color: var(--color-acento-oscuro);
+    color: var(--color-primario);
+}
+
+.dropdown .content a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-acento-oscuro);
 }
 
 .dropdown .content {
     width: 158.633px;
-    display: none;
     position: absolute;
-    background-color: var(--color-acento-transicion);
+    background-color: var(--color-acento-oscuro);
     border-radius: 0 0 8px 8px;
     text-align: center;
-    z-index: 10000;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all var(--transition-time);
+}
+
+.dropdown:hover .content {
+    pointer-events: auto;
+    opacity: 1;
+    color: var(--color-primario);
+
 }
 
 .dropdown #f_banda{
@@ -310,4 +333,8 @@ option {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.form-submitted .card:hover {
+    background-color: var(--color-acento-claro);
 }
