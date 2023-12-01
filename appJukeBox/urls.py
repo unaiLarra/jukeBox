@@ -9,5 +9,7 @@ urlpatterns = [
     path('bandas/<int:banda_id>', views.show_banda, name='banda'),
     path('paises', views.index_paises, name="paises"),
     path('paises/<int:pais_id>', views.show_pais, name='pais'),
-    path('formulario', views.upload_banda, name='upload')
+    path('formulario_banda', views.upload_banda, name='upload_banda'),
+    path('formulario_estilo', views.upload_estilo, name='upload_estilo'),
+    path('formulario_pais', views.upload_pais, name='upload_pais')
 ]

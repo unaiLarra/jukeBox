@@ -1,4 +1,4 @@
-/* Paletas de colores */
+/* Paletas de colores y otros valores constantes */
 
 :root {
     --transition-time: 0.5s;
@@ -123,12 +123,38 @@ nav a {
 a {
     color: var(--color-acento-oscuro);
     transition: all var(--transition-time);
-
 }
 
 a:hover {
     background-color: var(--color-acento-oscuro);
     color: var(--color-primario);
+}
+
+.dropdown:hover {
+    border-radius: 8px 8px 0 0;
+    background-color: var(--color-acento-transicion);
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+}
+
+.dropdown .content {
+    width: 158.633px;
+    display: none;
+    position: absolute;
+    background-color: var(--color-acento-transicion);
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    z-index: 10000;
+}
+
+.dropdown #f_banda{
+    margin-top: 5px;
 }
 
 /* Detalles de modelos */

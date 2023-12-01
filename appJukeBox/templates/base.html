@@ -18,7 +18,14 @@
             <a id="estilos" href="/estilos" >Estilos</a>
             <a id="bandas" href="/bandas">Bandas</a>
             <a id="paises" href="/paises">Paises</a>
-            <a id="formulario" href="/formulario">Formulario</a>
+            <div class="dropdown">
+                <a id="formulario">Formularios</a>
+                <div class="content">
+                    <a id="f_banda" href="/formulario_banda">Banda</a>
+                    <a id="f_estilo" href="/formulario_estilo">Estilo</a>
+                    <a id="f_pais" href="/formulario_pais">Pais</a>
+                </div>
+            </div>
           </nav>
 	     <section id="dinamico">
              {% block contenido %}{% endblock %}

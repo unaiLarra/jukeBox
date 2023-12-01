@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.http import HttpResponseRedirect
 from .models import Pais, Banda, Estilo
-from .forms import BandaForm
+from .forms import BandaForm, EstiloForm, PaisForm
 
 #devuelve el listado de paises
 def index_pais_banda(request):
@@ -55,8 +55,7 @@ def upload_banda(request):
 		form = BandaForm(request.POST, request.FILES)
 		if form.is_valid():
 			form.save()
-			print("Should be saved!")
-			return HttpResponseRedirect("formulario?submitted=True")
+			return HttpResponseRedirect("formulario_banda?submitted=True")
 	
 	else:
 		form = BandaForm()
@@ -64,4 +63,36 @@ def upload_banda(request):
 			submitted = True
 
 	context = {'form': form, 'submitted':submitted}
-	return render(request, 'formulario.html', context)
+	return render(request, 'formulario_banda.html', context)
+
+def upload_estilo(request):
+	submitted = False
+	if request.method == "POST":
+		form = EstiloForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect("formulario_estilo?submitted=True")
+	
+	else:
+		form = EstiloForm()
+		if "submitted" in request.GET:
+			submitted = True
+
+	context = {'form': form, 'submitted':submitted}
+	return render(request, 'formulario_estilo.html', context)
+
+def upload_pais(request):
+	submitted = False
+	if request.method == "POST":
+		form = PaisForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect("formulario_pais?submitted=True")
+	
+	else:
+		form = PaisForm()
+		if "submitted" in request.GET:
+			submitted = True
+
+	context = {'form': form, 'submitted':submitted}
+	return render(request, 'formulario_pais.html', context)
