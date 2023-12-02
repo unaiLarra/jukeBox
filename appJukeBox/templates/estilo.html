@@ -39,7 +39,11 @@
                     </div>
                     {% endfor %}
                 {% else %}
-                    No hay bandas dentro de este estilo
+                <section class="detail">
+                    <div class="card nodata">
+                        <p>No hay bandas dentro de este estilo</p>
+                    </div>
+                </section>
                 {% endif %}
             </section>
     {% else %}
