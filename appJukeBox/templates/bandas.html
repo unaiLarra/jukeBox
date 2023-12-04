@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block titulo %}Bandas{% endblock %}
 
 {% block contenido %}
-    <h2>Lista de bandas</h2>
+    <h2>{% trans "Lista de bandas" %}</h2>
 
     <section class="container">
         {% if bandas %}

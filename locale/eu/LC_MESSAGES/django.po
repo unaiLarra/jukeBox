@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-04 12:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\appJukeBox\templates\banda.html:7
+#, fuzzy
+#| msgid "Paises y bandas"
+msgid "Datos de la banda"
+msgstr "Herrialde ta´ taldeak"
+
+#: .\appJukeBox\templates\banda.html:33
+msgid "Lista de estilos"
+msgstr "Estilo zerrenda"
+
+#: .\appJukeBox\templates\bandas.html:6 .\appJukeBox\templates\estilo.html:23
+#: .\appJukeBox\templates\pais.html:18
+#, fuzzy
+#| msgid "Paises y bandas"
+msgid "Lista de bandas"
+msgstr "Herrialde ta´ taldeak"
+
+#: .\appJukeBox\templates\estilo.html:6
+msgid "Datos del estilo"
+msgstr "Estiloaren informazioa"
+
+#: .\appJukeBox\templates\estilos.html:6 .\appJukeBox\templates\paises.html:6
+msgid "Lista de paises"
+msgstr "Herrialde zerrenda"
+
+#: .\appJukeBox\templates\formulario_banda.html:6
+msgid "Añade una banda"
+msgstr "Talde bat gehitu"
+
+#: .\appJukeBox\templates\formulario_estilo.html:6
+msgid "Añade una estilo"
+msgstr "Estilo bat gehitu"
+
+#: .\appJukeBox\templates\formulario_pais.html:6
+msgid "Añade una pais"
+msgstr "Herrialde bat gehitu"
+
+#: .\appJukeBox\templates\index.html:18
+msgid "Paises y bandas"
+msgstr "Herrialde ta´ taldeak"
+
+#: .\appJukeBox\templates\pais.html:6
+msgid "Datos del pais"
+msgstr "Herrialdearen infomazioa"
+
+#: .\jukeBox\settings.py:113
+msgid "English"
+msgstr ""
+
+#: .\jukeBox\settings.py:114
+msgid "Spanish"
+msgstr ""
+
+#: .\jukeBox\settings.py:115
+msgid "Basque"
+msgstr ""

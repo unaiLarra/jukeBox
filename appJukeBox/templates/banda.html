@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block titulo %}Detalles de la banda{% endblock %}
 
 
 {% block contenido %}
-    <h2>Datos de la banda</h2>
+    <h2>{% trans "Datos de la banda" %}</h2>
         {% if banda %}
             <section class="detail">
                 <div class="card">
@@ -30,7 +32,7 @@
                 </div>
             </section>
 
-            <h2>Lista de estilos</h2>
+            <h2>{% trans "Lista de estilos" %}</h2>
 
             <section class="container">
                 {% if estilos %}

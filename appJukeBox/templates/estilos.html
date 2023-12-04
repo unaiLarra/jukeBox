@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block titulo %}Paises{% endblock %}
 
 {% block contenido %}
-    <h2>Lista de paises</h2>
+    <h2>{% trans "Lista de paises" %}</h2>
 
     <section class="container">
         {% if estilos %}
