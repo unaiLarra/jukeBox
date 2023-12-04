@@ -42,6 +42,13 @@
 
         <!-- hasta solucionar el problema el codigo javascript estará aquí -->
         <script>
+            // JQuery
+            $(document).ready(function() {
+                $("h2").dbclick(function () {
+                    $("div.card-content").slideUp();
+                });
+            });
+
             // Divs as links
             function redirect(link) {
                 window.location = link; 
