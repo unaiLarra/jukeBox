@@ -17,15 +17,15 @@
                     </div>
                     <ul>
                         <li>
-                            <b>Nombre:</b> 
+                            <b>{% trans "Nombre:" %}</b> 
                             {{ banda.nombre}}
                         </li>
                         <li>
-                            <b>Pais de Origen:</b>
+                            <b>{% trans "Pais de Origen:" %}</b>
                             <a href="/paises/{{ banda.pais.id }}">{{ banda.pais}}</a>
                         </li>
                         <li>
-                            <b>Descripcion:</b>
+                            <b>{% trans "Descripcion:" %}</b>
                             {{ banda.descripcion}}
                         </li>
                     </ul>

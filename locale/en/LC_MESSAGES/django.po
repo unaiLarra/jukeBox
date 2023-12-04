@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 13:39+0100\n"
+"POT-Creation-Date: 2023-12-04 13:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,19 @@ msgstr ""
 #| msgid "Paises y bandas"
 msgid "Datos de la banda"
 msgstr "Countries & Bands"
+
+#: .\appJukeBox\templates\banda.html:20 .\appJukeBox\templates\estilo.html:14
+#: .\appJukeBox\templates\pais.html:14
+msgid "Nombre:"
+msgstr "Name:"
+
+#: .\appJukeBox\templates\banda.html:24
+msgid "Pais de Origen:"
+msgstr "Country of origin:"
+
+#: .\appJukeBox\templates\banda.html:28
+msgid "Descripcion:"
+msgstr "Desctiption:"
 
 #: .\appJukeBox\templates\banda.html:35
 msgid "Lista de estilos"
@@ -77,6 +90,10 @@ msgstr "Palette"
 msgid "Datos del estilo"
 msgstr "Styles data"
 
+#: .\appJukeBox\templates\estilo.html:18
+msgid "Descripción:"
+msgstr "Description:"
+
 #: .\appJukeBox\templates\estilos.html:8 .\appJukeBox\templates\paises.html:8
 msgid "Lista de paises"
 msgstr "Countries list"
@@ -93,7 +110,7 @@ msgstr "Add any style"
 msgid "Añade una pais"
 msgstr "Add any country"
 
-#: .\appJukeBox\templates\index.html:18
+#: .\appJukeBox\templates\index.html:10
 msgid "Paises y bandas"
 msgstr "Countries & Bands"
 
