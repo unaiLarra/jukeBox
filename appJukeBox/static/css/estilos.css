@@ -236,7 +236,7 @@ a:hover {
     background-color: var(--color-acento-claro);
     border-radius: 8px;
 
-    transition: all var(--transition-time);
+    transition: background-color var(--transition-time);
 }
 
 .card-image {
@@ -248,7 +248,7 @@ a:hover {
 }
 
 .card-image img {
-    transition: all var(--transition-time);
+    transition: scale var(--transition-time);
 }
 
 .card:hover {
