@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 13:55+0100\n"
+"POT-Creation-Date: 2023-12-04 18:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,6 +53,7 @@ msgid "Inicio"
 msgstr ""
 
 #: .\appJukeBox\templates\base.html:21
+#: .\appJukeBox\templates\formulario_banda.html:40
 msgid "Estilos"
 msgstr ""
 
@@ -77,6 +78,7 @@ msgid "Estilo"
 msgstr ""
 
 #: .\appJukeBox\templates\base.html:29
+#: .\appJukeBox\templates\formulario_banda.html:28
 msgid "Pais"
 msgstr ""
 
@@ -98,6 +100,21 @@ msgstr ""
 
 #: .\appJukeBox\templates\formulario_banda.html:8
 msgid "Añade una banda"
+msgstr ""
+
+#: .\appJukeBox\templates\formulario_banda.html:22
+#: .\appJukeBox\templates\formulario_estilo.html:22
+#: .\appJukeBox\templates\formulario_pais.html:22
+msgid "Nombre"
+msgstr ""
+
+#: .\appJukeBox\templates\formulario_banda.html:34
+#: .\appJukeBox\templates\formulario_estilo.html:28
+msgid "Descripcion"
+msgstr ""
+
+#: .\appJukeBox\templates\formulario_banda.html:46
+msgid "Imagen"
 msgstr ""
 
 #: .\appJukeBox\templates\formulario_estilo.html:8

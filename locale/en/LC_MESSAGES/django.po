@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 13:55+0100\n"
+"POT-Creation-Date: 2023-12-04 18:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\appJukeBox\templates\banda.html:9
-#, fuzzy
-#| msgid "Paises y bandas"
 msgid "Datos de la banda"
-msgstr "Countries & Bands"
+msgstr "Band data"
 
 #: .\appJukeBox\templates\banda.html:20 .\appJukeBox\templates\estilo.html:14
 #: .\appJukeBox\templates\pais.html:14
@@ -43,16 +41,15 @@ msgstr "Styles list"
 
 #: .\appJukeBox\templates\bandas.html:8 .\appJukeBox\templates\estilo.html:25
 #: .\appJukeBox\templates\pais.html:20
-#, fuzzy
-#| msgid "Paises y bandas"
 msgid "Lista de bandas"
-msgstr "Countries & Bands"
+msgstr "Band list"
 
 #: .\appJukeBox\templates\base.html:20
 msgid "Inicio"
 msgstr "Intro"
 
 #: .\appJukeBox\templates\base.html:21
+#: .\appJukeBox\templates\formulario_banda.html:40
 msgid "Estilos"
 msgstr "Styles"
 
@@ -77,10 +74,9 @@ msgid "Estilo"
 msgstr "Style"
 
 #: .\appJukeBox\templates\base.html:29
-#, fuzzy
-#| msgid "Paises"
+#: .\appJukeBox\templates\formulario_banda.html:28
 msgid "Pais"
-msgstr "Countries"
+msgstr "Country"
 
 #: .\appJukeBox\templates\base.html:33
 msgid "Paleta de colores"
@@ -96,11 +92,26 @@ msgstr "Description:"
 
 #: .\appJukeBox\templates\estilos.html:8 .\appJukeBox\templates\paises.html:8
 msgid "Lista de paises"
-msgstr "Countries list"
+msgstr "Country list"
 
 #: .\appJukeBox\templates\formulario_banda.html:8
 msgid "Añade una banda"
 msgstr "Add any band"
+
+#: .\appJukeBox\templates\formulario_banda.html:22.\appJukeBox\templates\formulario_estilo.html:22
+#: .\appJukeBox\templates\formulario_pais.html:22
+#| msgid "Nombre:"
+msgid "Nombre"
+msgstr "Name:"
+
+#: .\appJukeBox\templates\formulario_banda.html:34.\appJukeBox\templates\formulario_estilo.html:28
+#| msgid "Descripcion:"
+msgid "Descripcion"
+msgstr "Desctiption:"
+
+#: .\appJukeBox\templates\formulario_banda.html:46
+msgid "Imagen"
+msgstr "Image"
 
 #: .\appJukeBox\templates\formulario_estilo.html:8
 msgid "Añade una estilo"
