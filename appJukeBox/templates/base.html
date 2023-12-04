@@ -26,6 +26,14 @@
                     <a id="f_pais" href="/formulario_pais">Pais</a>
                 </div>
             </div>
+            <div class="dropdown color">
+                <a id="colores">Paleta de colores</a>
+                <div class="content">
+                    <a onclick="apply_default()">Default</a>
+                    <a onclick="apply_hc()">High Contrast</a>
+                    <a onclick="apply_dark()">Dark</a>
+                </div>
+            </div>
           </nav>
 	     <section id="dinamico">
              {% block contenido %}{% endblock %}
@@ -36,6 +44,38 @@
         <script>
             function redirect(link) {
                 window.location = link; 
+            }
+
+            var r = document.querySelector(':root');
+
+            function apply_default() {
+                r.style.setProperty('--color-primario', 'rgb(248, 196, 245)');
+                r.style.setProperty('--color-acento-oscuro', 'rgb(48, 35, 58)');
+                r.style.setProperty('--color-acento-claro', 'rgb(207, 159, 228)');
+                r.style.setProperty('--color-bordes', 'rgb(122, 85, 155)');
+                r.style.setProperty('--color-acento-transicion', 'rgb(201, 137, 228)');
+                r.style.setProperty('--color-seleccion-texto', 'rgb(255, 238, 254)');
+                r.style.setProperty('--color-seleccion-fondo', 'rgb(233, 92, 223)');
+            }
+
+            function apply_hc() {
+                r.style.setProperty('--color-primario', 'rgb(255, 255, 255)');
+                r.style.setProperty('--color-acento-oscuro', 'rgb(0, 0, 0)');
+                r.style.setProperty('--color-acento-claro', 'rgb(212, 212, 212)');
+                r.style.setProperty('--color-bordes', 'rgb(0, 0, 0)');
+                r.style.setProperty('--color-acento-transicion', 'rgb(156, 156, 156)');
+                r.style.setProperty('--color-seleccion-texto', 'rgb(255, 255, 255)');
+                r.style.setProperty('--color-seleccion-fondo', 'rgb(0, 0, 0)');
+            }
+
+            function apply_dark() {
+                r.style.setProperty('--color-primario', 'rgb(41, 41, 41)');
+                r.style.setProperty('--color-acento-oscuro', 'rgb(158, 158, 158)');
+                r.style.setProperty('--color-acento-claro', 'rgb(27, 27, 27)');
+                r.style.setProperty('--color-bordes', 'rgb(0, 0, 0)');
+                r.style.setProperty('--color-acento-transicion', 'rgb(19, 19, 19)');
+                r.style.setProperty('--color-seleccion-texto', 'rgb(158, 158, 158)');
+                r.style.setProperty('--color-seleccion-fondo', 'rgb(0, 0, 0)');
             }
         </script>
     </body>
