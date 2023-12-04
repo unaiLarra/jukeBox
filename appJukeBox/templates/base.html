@@ -29,9 +29,9 @@
             <div class="dropdown color">
                 <a id="colores">Paleta de colores</a>
                 <div class="content">
-                    <a onclick="apply_default()">Default</a>
-                    <a onclick="apply_hc()">High Contrast</a>
-                    <a onclick="apply_dark()">Dark</a>
+                    <a id="def" onclick="apply_default()">Default</a>
+                    <a id="hc" onclick="apply_hc()">High Contrast</a>
+                    <a id="dk" onclick="apply_dark()">Dark</a>
                 </div>
             </div>
           </nav>
@@ -56,7 +56,7 @@
 
             const retrieveTheme = function() {
                 const activeTheme = localStorage.getItem("theme");
-                //r.style.setProperty('--transition-time','0s');
+                r.style.setProperty('--transition-time','0s');
                 if (activeTheme == 0) {
                     apply_default();
                 } else if (activeTheme == 1) {
@@ -64,11 +64,9 @@
                 } else {
                     apply_dark();
                 }
-                //r.style.setProperty('--transition-time','0.5s');
+                r.style.setProperty('--transition-time','0.5s');
             }
             
-            var theme = 0;
-
             window.onload = retrieveTheme();
 
             function apply_default() {
