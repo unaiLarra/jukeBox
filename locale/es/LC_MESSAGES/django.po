@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 12:47+0100\n"
+"POT-Creation-Date: 2023-12-04 13:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,40 +18,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\appJukeBox\templates\banda.html:7
+#: .\appJukeBox\templates\banda.html:9
 #, fuzzy
 #| msgid "Paises y bandas"
 msgid "Datos de la banda"
 msgstr "Paises y bandas"
 
-#: .\appJukeBox\templates\banda.html:33
+#: .\appJukeBox\templates\banda.html:35
 msgid "Lista de estilos"
 msgstr ""
 
-#: .\appJukeBox\templates\bandas.html:6 .\appJukeBox\templates\estilo.html:23
-#: .\appJukeBox\templates\pais.html:18
+#: .\appJukeBox\templates\bandas.html:8 .\appJukeBox\templates\estilo.html:25
+#: .\appJukeBox\templates\pais.html:20
 #, fuzzy
 #| msgid "Paises y bandas"
 msgid "Lista de bandas"
 msgstr "Paises y bandas"
 
-#: .\appJukeBox\templates\estilo.html:6
+#: .\appJukeBox\templates\base.html:20
+msgid "Inicio"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:21
+msgid "Estilos"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:22
+msgid "Bandas"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:23
+msgid "Paises"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:25
+msgid "Formularios"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:27
+msgid "Banda"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:28
+msgid "Estilo"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:29
+msgid "Pais"
+msgstr ""
+
+#: .\appJukeBox\templates\base.html:33
+msgid "Paleta de colores"
+msgstr ""
+
+#: .\appJukeBox\templates\estilo.html:8
 msgid "Datos del estilo"
 msgstr ""
 
-#: .\appJukeBox\templates\estilos.html:6 .\appJukeBox\templates\paises.html:6
+#: .\appJukeBox\templates\estilos.html:8 .\appJukeBox\templates\paises.html:8
 msgid "Lista de paises"
 msgstr ""
 
-#: .\appJukeBox\templates\formulario_banda.html:6
+#: .\appJukeBox\templates\formulario_banda.html:8
 msgid "Añade una banda"
 msgstr ""
 
-#: .\appJukeBox\templates\formulario_estilo.html:6
+#: .\appJukeBox\templates\formulario_estilo.html:8
 msgid "Añade una estilo"
 msgstr ""
 
-#: .\appJukeBox\templates\formulario_pais.html:6
+#: .\appJukeBox\templates\formulario_pais.html:8
 msgid "Añade una pais"
 msgstr ""
 
@@ -59,7 +95,7 @@ msgstr ""
 msgid "Paises y bandas"
 msgstr "Paises y bandas"
 
-#: .\appJukeBox\templates\pais.html:6
+#: .\appJukeBox\templates\pais.html:8
 msgid "Datos del pais"
 msgstr ""
 
