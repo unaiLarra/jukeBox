@@ -3,12 +3,23 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from django.http import HttpResponseRedirect
 from .models import Pais, Banda, Estilo
 from .forms import BandaForm, EstiloForm, PaisForm
+from django.utils.translation import gettext, activate, get_language
 
 #devuelve el listado de paises
 def index_pais_banda(request):
+	trans = translate(language='eu')
 	listabandas = Banda.objects.raw('SELECT * FROM( SELECT * FROM appJukeBox_Banda ORDER BY nombre DESC) GROUP BY pais_id')
 	context = {'lista_banda': listabandas}
 	return render(request, 'index.html', context)
+
+def translate(language): 
+	cur_language = get_language()
+	try :
+		activate(language)
+		text = gettext('hello')
+	finally :
+		activate(cur_language)
+	return text
 
 #devuelve los detalles de un estilo
 def show_estilo(request, estilo_id):

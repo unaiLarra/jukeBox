@@ -13,6 +13,8 @@
     </head>
     <body>
         <div id="content">
+         {% block idiomas %}
+         {% endblock %}
          <header>
             <h1>JukeBox</h1>
          </header>
@@ -53,6 +55,22 @@
             // Theme management
             var r = document.querySelector(':root');
             
+            const storeIdioma = function(idioma) {
+                localStorage.setItem("idioma",idioma)
+            }
+            const retrieveIdioma = function() {
+                const activeIdioma = localStorage.getItem("idioma");
+                r.style.setProperty('--transition-time', '0s');
+                if (activeIdioma == 1) {
+                    apply_es();
+                } else if (activeIdioma == 0) {
+                    apply_eu();
+                } else {
+                    apply_en();
+                }
+                r.style.setProperty('--transition-time', '0.5s');
+            }
+
             const storeTheme = function(theme) {
                 localStorage.setItem("theme",theme);
             }
@@ -71,6 +89,18 @@
             }
             
             window.onload = retrieveTheme();
+
+            function apply_eu() {
+                localStorage.setProperty('idioma', 'eu');
+            }
+
+            function apply_es() {
+                localStorage.setProperty('idioma', 'es');
+            }
+
+            function apply_en() {
+                localStorage.setProperty('idioma', 'en');
+            }
 
             function apply_default() {
                 r.style.setProperty('--color-primario', 'rgb(248, 196, 245)');
