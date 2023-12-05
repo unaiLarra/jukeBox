@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
-{% get_available_languages as LANGUAGES %}
-{% get_language_info_list for LANGUAGES as languages %}
 
 {% block titulo %}Listado de estilos{% endblock %}
 
 {% block idiomas %}
 <p class = "idiomas card">
-    <a href="/{{ language.code }}/" role="button"> Euskara </a>
-    <a href="/{{ LANGUAGE_CODE }}/" role="button"> Castellano </a>
-    <a href="/{{ language.code }}/" role="button"> English </a>
+    <a href="/eu/" role="button"> Euskera </a>
+    <a href="/es/" role="button"> Castellano </a>
+    <a href="/en/" role="button"> English </a>
  </p>
 {% endblock %}
 {% block contenido %}
@@ -23,7 +20,7 @@
     <section class="container">
         {% if lista_banda %}
         {% for b in lista_banda %}
-            <div class="card" onclick="redirect('/paises/{{ b.pais.id }}')">
+            <div class="card" onclick="redirect('/{{LANGUAGE_CODE}}/paises/{{ b.pais.id }}')">
                 <div class="card-image">
                     {% if b.imagen %}
                     <img src="{{b.imagen.url}}" alt="sin imagen">
@@ -35,7 +32,7 @@
                     </h2>
                     <ul>
                         <li>
-                            <a href="/bandas/{{ b.id }}">{{ b.nombre}}</a>
+                            <a href="/{{LANGUAGE_CODE}}/bandas/{{ b.id }}">{{ b.nombre}}</a>
                         </li>
                     </ul>
                 </div>

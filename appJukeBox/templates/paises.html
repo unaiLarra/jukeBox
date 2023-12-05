@@ -10,7 +10,7 @@
     <section class="container">
         {% if paises %}
             {% for p in paises %}
-            <div class="card" onclick="redirect('/paises/{{ p.id }}')">
+            <div class="card" onclick="redirect('/{{LANGUAGE_CODE}}/paises/{{ p.id }}')">
                 <div class="card-content">
                     <h2>
                         {{ p.nombre}}

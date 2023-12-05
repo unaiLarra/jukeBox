@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 
 <html lang="en">
     
@@ -19,16 +22,16 @@
             <h1>JukeBox</h1>
          </header>
          <nav>
-            <a id="index" href="/">{% trans "Inicio" %}</a>
-            <a id="estilos" href="/estilos" >{% trans "Estilos" %}</a>
-            <a id="bandas" href="/bandas">{% trans "Bandas" %}</a>
-            <a id="paises" href="/paises">{% trans "Paises" %}</a>
+            <a id="index" href="/{{LANGUAGE_CODE}}/">{% trans "Inicio" %}</a>
+            <a id="estilos" href="/{{LANGUAGE_CODE}}/estilos" >{% trans "Estilos" %}</a>
+            <a id="bandas" href="/{{LANGUAGE_CODE}}/bandas">{% trans "Bandas" %}</a>
+            <a id="paises" href="/{{LANGUAGE_CODE}}/paises">{% trans "Paises" %}</a>
             <div class="dropdown">
                 <a id="formulario">{% trans "Formularios" %}</a>
                 <div class="content">
-                    <a id="f_banda" href="/formulario_banda">{% trans "Banda" %}</a>
-                    <a id="f_estilo" href="/formulario_estilo">{% trans "Estilo" %}</a>
-                    <a id="f_pais" href="/formulario_pais">{% trans "Pais" %}</a>
+                    <a id="f_banda" href="/{{LANGUAGE_CODE}}/formulario_banda">{% trans "Banda" %}</a>
+                    <a id="f_estilo" href="/{{LANGUAGE_CODE}}/formulario_estilo">{% trans "Estilo" %}</a>
+                    <a id="f_pais" href="/{{LANGUAGE_CODE}}/formulario_pais">{% trans "Pais" %}</a>
                 </div>
             </div>
             <div class="dropdown color">
@@ -58,6 +61,7 @@
             const storeIdioma = function(idioma) {
                 localStorage.setItem("idioma",idioma)
             }
+            
             const retrieveIdioma = function() {
                 const activeIdioma = localStorage.getItem("idioma");
                 r.style.setProperty('--transition-time', '0s');
@@ -69,6 +73,12 @@
                     apply_en();
                 }
                 r.style.setProperty('--transition-time', '0.5s');
+            }
+
+            var idioma = 'es';
+
+            function cambiarIdioma(codigo) {
+                idioma = codigo
             }
 
             const storeTheme = function(theme) {

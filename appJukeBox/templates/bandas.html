@@ -10,7 +10,7 @@
     <section class="container">
         {% if bandas %}
             {% for b in bandas %}
-            <div class="card" onclick="redirect('/bandas/{{ b.id }}')">
+            <div class="card" onclick="redirect('/{{LANGUAGE_CODE}}/bandas/{{ b.id }}')">
                 <div class="card-image">
                     {% if b.imagen %}
                     <img src="{{b.imagen.url}}" alt="sin imagen">

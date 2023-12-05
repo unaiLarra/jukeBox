@@ -10,7 +10,7 @@
     <section class="container">
         {% if estilos %}
             {% for e in estilos %}
-            <div class="card" onclick="redirect('/estilos/{{ e.id }}')">
+            <div class="card" onclick="redirect('/{{LANGUAGE_CODE}}/estilos/{{ e.id }}')">
                 <div class="card-content">
                     <h2>
                         {{ e.nombre}}
